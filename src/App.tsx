@@ -13,7 +13,7 @@ function App() {
     <AppContainer>
       <CustomDragLayer />
       {lists.map((list) => (
-        <Column text={list.text} key={list.id} id={list.id} />
+        <Column text={list.text} key={list.id} id={list.id} index={list.id} />
       ))}
       <AddNewItem
         toggleButtonText="+ Add another list"
