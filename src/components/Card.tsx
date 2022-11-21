@@ -14,11 +14,11 @@ type CardProps = {
   isPreview?: boolean;
 };
 
-const Card = ({ text, id, index, columnId, isPreview }: CardProps) => {
+const Card = ({ text, id, columnId, isPreview }: CardProps) => {
   const { draggedItem, dispatch } = useAppState();
   const ref = useRef<HTMLDivElement>(null);
 
-  const { drag } = useItemDrag({ type: "CARD", id, index, text, columnId });
+  const { drag } = useItemDrag({ type: "CARD", id, text, columnId });
 
   const [, drop] = useDrop({
     accept: "CARD",

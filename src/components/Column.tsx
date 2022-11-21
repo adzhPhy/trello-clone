@@ -20,7 +20,7 @@ const Column = ({ text, id, isPreview }: ColumnProps) => {
   const tasks = getTaskByListId(id);
   const ref = useRef<HTMLDivElement>(null);
   const [, drop] = useDrop({
-    accept: "COLUMN",
+    accept: ["COLUMN", "CARD"],
     hover(item: DragItem) {
       if (!item) {
         return;

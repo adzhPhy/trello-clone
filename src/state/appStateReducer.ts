@@ -21,7 +21,7 @@ export type AppState = {
 export const appStateReducer = (
   draft: AppState,
   action: Action
-): List[] | void => {
+): AppState | void => {
   switch (action.type) {
     case "ADD_LIST": {
       draft.lists.push({
